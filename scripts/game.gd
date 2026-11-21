@@ -41,8 +41,6 @@ func _ready():
     narrator.subtitle_label = subtitle
     add_child(narrator)
 
-    narrator.say("You are in a room. This is correct.")
-    narrator.say("Ahead of you is a door. You are going to open it.")
     _set_room("the room")
 
     Audio.play_music("game")
@@ -297,32 +295,18 @@ func _fire(id: String) -> void:
     match id:
         "choice":
             _set_room("the choice")
-            narrator.say("Two doors. The choice is entirely yours.")
-            narrator.say("I have already decided which one you will pick.")
         "c_enter":
             _set_room("the third room")
-            if chosen == "left":
-                narrator.say("You chose the left door.")
-                narrator.say("You will never know what was behind the right one. It was also a door.")
-            elif chosen == "right":
-                narrator.say("You chose the right door.")
-                narrator.say("The left door was also a door. You lost nothing. You gained nothing.")
-            else:
-                narrator.say("You are in the third room.")
 
 func _on_door_opened(id: String) -> void:
     match id:
         "a_to_b":
             _set_room("the corridor")
-            narrator.say("You opened the door. I knew you would.")
         "b_left":
             chosen = "left"
-            narrator.say("The left door. A bold choice.")
         "b_right":
             chosen = "right"
-            narrator.say("The right door. A predictable choice.")
         "c_back":
-            narrator.say("And so we return. Nothing was learned. Perfect.")
             get_tree().create_timer(1.5).timeout.connect(func():
                 player.global_position = Vector3(0.0, 0.1, 8.0)
                 player.rotation.y = PI

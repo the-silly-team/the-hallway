@@ -6,13 +6,11 @@ inspired by the "dig a hole, sell the dirt, upgrade the shovel" loop — except 
 
 > **status:** early. the repo currently holds the reusable base (godot project, menu, settings, persistence, input, procedural textures/audio, SILLYSOFT asset formats + tooling). the mowing loop itself is still being designed. screenshots in `docs/` are from the base engine.
 
-## play in your browser
-
-**[the-silly-team.github.io/mow-my-lawn](https://the-silly-team.github.io/mow-my-lawn/)**
-
 ## download
 
-**[windows build / releases](https://github.com/the-silly-team/mow-my-lawn/releases)** — first playable build lands here when v1 is ready. no steam, no $100 fee, no launcher. just a zip.
+**[the-silly-team.github.io/mow-my-lawn](https://the-silly-team.github.io/mow-my-lawn/)** ← the download page. click there to grab the windows build.
+
+**[direct link to releases](https://github.com/the-silly-team/mow-my-lawn/releases)** — first playable build lands here when v1 is ready. no steam, no $100 fee, no launcher. just a zip.
 
 ## the pitch
 
