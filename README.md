@@ -1,4 +1,4 @@
-# MOW MY LAWN 🌱
+# MOW MY LAWN
 
 **a game about mowing a lawn that refuses to stay mowed.**
 
