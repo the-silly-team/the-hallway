@@ -4,7 +4,7 @@ const MenuBG3D := preload("res://scripts/menu_bg3d.gd")
 const SettingsUI := preload("res://scripts/settings_ui.gd")
 const UI := preload("res://scripts/ui_utils.gd")
 
-const TITLE := "THE DOOR"
+const TITLE := "MOW THE LAWN"
 
 var _fade: ColorRect
 var _title: Label
@@ -78,7 +78,7 @@ func _build_ui() -> void:
     add_child(_title)
 
     _tagline = Label.new()
-    _tagline.text = "a short game about doors"
+    _tagline.text = "a lawn that refuses to stay mowed"
     _tagline.set_anchors_preset(Control.PRESET_CENTER_TOP)
     _tagline.offset_left = -400.0
     _tagline.offset_right = 400.0
@@ -124,7 +124,7 @@ func _build_ui() -> void:
     add_child(hint)
 
     var ver := Label.new()
-    ver.text = "the door  ·  v0.1"
+    ver.text = "mow the lawn  ·  v0.1"
     ver.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
     ver.offset_left = -220.0
     ver.offset_right = -24.0
