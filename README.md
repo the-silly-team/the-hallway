@@ -1,4 +1,4 @@
-# THE DOOR 🚪
+# THE DOOR
 
 **a first-person walking simulator about a hallway. and one door.**
 
