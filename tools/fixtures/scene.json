@@ -1,0 +1,24 @@
+{
+  "name": "corridors_runtime",
+  "source": "test corridors",
+  "objects": [
+    {
+      "id": 1,
+      "template": "wall.drtx",
+      "position": [0.0, 1.5, -12.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [16.0, 3.0, 0.3],
+      "flags": 0,
+      "assets": ["wall.drtx", "wall_normal.drtx"]
+    },
+    {
+      "id": 2,
+      "template": "door.drtx",
+      "position": [8.0, 1.5, -6.0],
+      "rotation": [0.0, 90.0, 0.0],
+      "scale": [1.0, 1.0, 1.0],
+      "flags": 1,
+      "assets": ["door.drtx", "door.wav"]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# godot generated
+.godot/
+
+# logs / debug artifacts
+*.log
+headless*.log
+run.log
+
+# local screenshots
+shot*.png
+shot*.png.import
+live*.png
+live*.png.import
+
+# os junk
+Thumbs.db
+desktop.ini
+.DS_Store

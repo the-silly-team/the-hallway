@@ -1,0 +1,28 @@
+{
+  "name": "test corridors",
+  "spawn": [0.0, 1.7, 4.0],
+  "ambient": [0.08, 0.09, 0.12],
+  "objects": [
+    {
+      "type": "room",
+      "name": "room_a",
+      "position": [0.0, 0.0, -6.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [16.0, 3.0, 12.0],
+      "props": {
+        "label": "room a",
+        "door": "a_to_b"
+      }
+    },
+    {
+      "type": "door",
+      "name": "a_to_b",
+      "position": [8.0, 1.5, -6.0],
+      "rotation": [0.0, 90.0, 0.0],
+      "scale": [1.0, 1.0, 1.0],
+      "props": {
+        "target": "room_b"
+      }
+    }
+  ]
+}

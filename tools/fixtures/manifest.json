@@ -1,0 +1,20 @@
+{
+  "title": "corridors pack",
+  "author": "lux",
+  "entries": [
+    {
+      "path": "wall.drtx",
+      "magic": "DRTX",
+      "size": 921633,
+      "crc": 1689646415,
+      "deps": []
+    },
+    {
+      "path": "tone.drau",
+      "magic": "DRAU",
+      "size": 11059,
+      "crc": 3141592653,
+      "deps": ["tone.wav"]
+    }
+  ]
+}

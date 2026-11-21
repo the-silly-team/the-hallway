@@ -1,0 +1,25 @@
+config_version=5
+
+[application]
+
+config/name="the door"
+run/main_scene="res://menu.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
+
+[autoload]
+
+Settings="*res://scripts/settings.gd"
+Audio="*res://scripts/audio.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[physics]
+
+3d/default_gravity=14.0
+
+[rendering]
+
+renderer/rendering_method="forward_plus"
