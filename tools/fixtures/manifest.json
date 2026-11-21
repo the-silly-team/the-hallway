@@ -3,15 +3,15 @@
   "author": "lux",
   "entries": [
     {
-      "path": "wall.drtx",
-      "magic": "DRTX",
+      "path": "wall.sltx",
+      "magic": "SLTX",
       "size": 921633,
       "crc": 1689646415,
       "deps": []
     },
     {
-      "path": "tone.drau",
-      "magic": "DRAU",
+      "path": "tone.slau",
+      "magic": "SLAU",
       "size": 11059,
       "crc": 3141592653,
       "deps": ["tone.wav"]

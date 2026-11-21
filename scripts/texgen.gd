@@ -1,9 +1,9 @@
 extends RefCounted
 
 const S := 256
-const DrTex = preload("res://scripts/dr/dr_texture.gd")
-const ASSET_DIR := "res://assets/drtx/"
-const SETTING_PREFIX := "doordsoft/drtx/"
+const SlTex = preload("res://scripts/sillysoft/silly_texture.gd")
+const ASSET_DIR := "res://assets/sltx/"
+const SETTING_PREFIX := "sillysoft/sltx/"
 
 static var _alb := {}
 static var _nrm := {}
@@ -160,19 +160,19 @@ static func _make(kind: String) -> Array:
             return _metal()
     return _wall()
 
-static func _drtx_path(kind: String) -> String:
+static func _sltx_path(kind: String) -> String:
     var key := SETTING_PREFIX + kind
     if ProjectSettings.has_setting(key):
         var override := str(ProjectSettings.get_setting(key))
         if not override.is_empty():
             return override
-    return ASSET_DIR + kind + ".drtx"
+    return ASSET_DIR + kind + ".sltx"
 
-static func _try_load_drtx(kind: String) -> bool:
-    var path := _drtx_path(kind)
+static func _try_load_sltx(kind: String) -> bool:
+    var path := _sltx_path(kind)
     if not FileAccess.file_exists(path):
         return false
-    var d := DrTex.load(path)
+    var d := SlTex.load(path)
     if d.is_empty():
         return false
     var img: Image = d.get("image")
@@ -197,7 +197,7 @@ static func _normal_from_color(img: Image) -> ImageTexture:
 static func albedo(kind: String) -> ImageTexture:
     if _alb.has(kind):
         return _alb[kind]
-    if _try_load_drtx(kind):
+    if _try_load_sltx(kind):
         return _alb[kind]
     var pair := _make(kind)
     _alb[kind] = pair[0]

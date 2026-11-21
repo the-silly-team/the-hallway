@@ -1,9 +1,9 @@
 extends Node
 
-const DrAud = preload("res://scripts/dr/dr_audio.gd")
+const SlAud = preload("res://scripts/sillysoft/silly_audio.gd")
 const AudioGen = preload("res://scripts/audio_gen.gd")
-const ASSET_DIR := "res://assets/drau/"
-const SETTING_PREFIX := "doordsoft/drau/"
+const ASSET_DIR := "res://assets/slau/"
+const SETTING_PREFIX := "sillysoft/slau/"
 
 var _sfx := {}
 var music := {}
@@ -36,22 +36,22 @@ func _gen_music_deferred() -> void:
         _cur = ""
         play_music(k)
 
-func _drau_paths(id: String, group: String) -> Array:
+func _slau_paths(id: String, group: String) -> Array:
     var out := []
     var key := SETTING_PREFIX + group + "/" + id
     if ProjectSettings.has_setting(key):
         var override := str(ProjectSettings.get_setting(key))
         if not override.is_empty():
             out.append(override)
-    out.append(ASSET_DIR + group + "/" + id + ".drau")
-    out.append(ASSET_DIR + id + ".drau")
+    out.append(ASSET_DIR + group + "/" + id + ".slau")
+    out.append(ASSET_DIR + id + ".slau")
     return out
 
-func _load_drau(id: String, group: String) -> AudioStreamWAV:
-    for path in _drau_paths(id, group):
+func _load_slau(id: String, group: String) -> AudioStreamWAV:
+    for path in _slau_paths(id, group):
         if not FileAccess.file_exists(path):
             continue
-        var d := DrAud.load(path)
+        var d := SlAud.load(path)
         if d.is_empty():
             continue
         var s: AudioStreamWAV = d.get("stream")
@@ -60,7 +60,7 @@ func _load_drau(id: String, group: String) -> AudioStreamWAV:
     return null
 
 func _music_or_gen(kind: String) -> AudioStreamWAV:
-    var s := _load_drau(kind, "music")
+    var s := _load_slau(kind, "music")
     return s if s != null else AudioGen._mk_music(kind)
 
 func _bus(n: String) -> void:
@@ -94,15 +94,15 @@ func sfx(id: String, vol_db := 0.0) -> void:
     p.play()
 
 func _gen_sfx() -> void:
-    var s := _load_drau("click", "sfx")
+    var s := _load_slau("click", "sfx")
     _sfx["click"] = s if s != null else AudioGen._mk_blip(980.0, 620.0, 0.06, 0.7)
-    s = _load_drau("hover", "sfx")
+    s = _load_slau("hover", "sfx")
     _sfx["hover"] = s if s != null else AudioGen._mk_blip(1400.0, 1250.0, 0.04, 0.28)
-    s = _load_drau("confirm", "sfx")
+    s = _load_slau("confirm", "sfx")
     _sfx["confirm"] = s if s != null else AudioGen._mk_confirm()
-    s = _load_drau("door_open", "sfx")
+    s = _load_slau("door_open", "sfx")
     _sfx["door_open"] = s if s != null else AudioGen._mk_door_open()
-    s = _load_drau("door_close", "sfx")
+    s = _load_slau("door_close", "sfx")
     _sfx["door_close"] = s if s != null else AudioGen._mk_door_close()
-    s = _load_drau("step", "sfx")
+    s = _load_slau("step", "sfx")
     _sfx["step"] = s if s != null else AudioGen._mk_step()

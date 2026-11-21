@@ -1,33 +1,36 @@
-# THE DOOR
+# MOW MY LAWN 🌱
 
-**a first-person walking simulator about a hallway. and one door.**
+**a game about mowing a lawn that refuses to stay mowed.**
 
-built with godot 4.7.2. no endings yet. you walk down a corridor, a narrator talks to you, and there is a door. that is the whole game so far and it is somehow enough.
+inspired by the "dig a hole, sell the dirt, upgrade the shovel" loop — except instead of a hole you have a lawn, instead of dirt you have clippings, and instead of finishing you have MOW MY LAWN 2 where the grass grows forever. trust us.
 
-<p align="center">
-  <img src="docs/final_play_small.png" alt="the hallway and the door" width="640">
-</p>
+> **status:** early. the repo currently holds the reusable base (godot project, menu, settings, persistence, input, procedural textures/audio, SILLYSOFT asset formats + tooling). the mowing loop itself is still being designed. screenshots in `docs/` are from the base engine.
 
-## what's in here
+## play in your browser
 
-- a repeating 3d corridor with real movement, head bob, footsteps and collision
-- a persistent narrator with subtitles, room labels and scene fades
-- a door that swings open, closes behind you, and makes sounds
-- a menu with animated typewriter title, fade-in buttons and a 3d background
-- settings, pause menu, persistence, vignette and photo-mode-ish screenshots
-- **DOORSOFT**: an original proprietary binary asset format family with a headless CLI packer and runtime loaders
+**[the-silly-team.github.io/mow-my-lawn](https://the-silly-team.github.io/mow-my-lawn/)**
 
-no endings. on purpose. ask later.
+## download
 
-## run it
+**[windows build / releases](https://github.com/the-silly-team/mow-my-lawn/releases)** — first playable build lands here when v1 is ready. no steam, no $100 fee, no launcher. just a zip.
 
-grab the portable godot 4.7.2 console build (no winget, no installer) and point it at the project:
+## the pitch
+
+- mow grass, collect clippings, sell them, buy a better mower, mow more grass
+- day/night cycle: grass grows faster at night, you need lights to see what you're doing
+- achievements for stupid stuff like perfect stripes, mowing at 3am, and hitting a sprinkler
+- a weird secret under the lawn
+- the lawn keeps growing. forever. that's the whole sequel
+
+## run from source
+
+portable godot 4.7.2, no installer, no winget:
 
 ```powershell
 $Godot = "C:\path\to\Godot_v4.7.2-stable_win64_console.exe"
 
-& $Godot --path .              # starts at menu.tscn
-& $Godot --path . main.tscn    # skip the menu, go straight to the hallway
+& $Godot --path .              # menu
+& $Godot --path . main.tscn    # skip menu
 ```
 
 headless smoke test:
@@ -37,28 +40,37 @@ headless smoke test:
 & $Godot --headless --path . menu.tscn --quit-after 300
 ```
 
-## controls
+## controls (base build)
 
 | input | action |
 |---|---|
 | `W A S D` | walk |
 | mouse | look around |
-| `E` | interact with the door |
+| `E` | interact |
 | `Esc` | pause / release mouse |
 | click | recapture mouse |
 
-## assets
+## SILLYSOFT
 
-textures and audio are generated procedurally at runtime, but packed DOORSOFT files in `assets/` take priority when present. drop a `.drtx` or `.drau` in the right folder and the game uses it. corrupt files fall back to procedural generation instead of crashing.
+assets use SILLYSOFT, our own original binary format family (no copying anyone's formats, ever). every file is `magic(4) + vendor(6 "SILLY!") + version(u16) + payload + crc32(u32)`.
 
-full format docs + CLI commands: [DOORSOFT.md](DOORSOFT.md)
+| ext | magic | what |
+|---|---|---|
+| `.sltx` | `SLTX` | texture + optional normal map |
+| `.slau` | `SLAU` | 16-bit PCM audio |
+| `.slcl` | `SLCL` | collision boxes |
+| `.sllv` | `SLLV` | level source |
+| `.slsc` | `SLSC` | compiled scene |
+| `.slmf` | `SLMF` | package manifest |
 
-**companion app:** [door-inspector](https://github.com/the-silly-team/door-inspector) opens every `.dr*` file natively — previews textures, plays audio, follows references, dumps hex. standalone python, zero godot.
+full docs: [SILLYSOFT.md](SILLYSOFT.md)
+
+**companion app:** [lawn-inspector](https://github.com/the-silly-team/lawn-inspector) — open any `.sl*` file, preview textures, play audio, follow references, read hex. standalone python, zero godot, zero plugins.
 
 ## credits
 
 - **lux** — design, ideas, vibes
 - **opencode** — most of the actual code (unpaid labor, still showing up)
-- **the silly team** — the corporate umbrella
+- **the silly team** — the corporate umbrella, owner of SILLYSOFT™
 
 built with :3 and concerning amounts of coffee.
