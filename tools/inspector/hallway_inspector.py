@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""SILLYSOFT LAWN INSPECTOR - standalone viewer for the .sl* asset family.
+"""SILLYSOFT HALLWAY INSPECTOR - standalone viewer for the .sl* asset family.
 
 Zero external dependencies. Python 3.8+ with tkinter (stdlib).
 
-    python lawn_inspector.py [file.sltx ...]
+    python hallway_inspector.py [file.sltx ...]
 
 Shows the decoded field layout with offsets, previews images, plays audio,
 resolves cross-file references, and dumps raw bytes. Nothing here is a text
@@ -385,7 +385,7 @@ class InspectorApp:
 
     # ------------------------------------------------------------ ui
     def _build_ui(self):
-        self.root.title("SILLYSOFT LAWN INSPECTOR // proprietary binary viewer")
+        self.root.title("SILLYSOFT HALLWAY INSPECTOR // proprietary binary viewer")
         self.root.geometry("1200x780")
         self.root.minsize(920, 620)
         self.root.configure(bg=BG)
@@ -419,7 +419,7 @@ class InspectorApp:
 
         top = tk.Frame(self.root, bg=BG, height=58)
         top.pack(fill="x", side="top")
-        tk.Label(top, text="SILLYSOFT // LAWN INSPECTOR", bg=BG, fg=ACCENT,
+        tk.Label(top, text="SILLYSOFT // HALLWAY INSPECTOR", bg=BG, fg=ACCENT,
                  font=("Consolas", 15, "bold")).pack(side="left", padx=(16, 18))
         ttk.Button(top, text="  OPEN FILE  ", command=self.pick_file).pack(side="left")
         ttk.Checkbutton(top, text="resolve references", variable=self.auto_resolve,
@@ -794,7 +794,7 @@ class InspectorApp:
         if winsound is None:
             return
         self._stop_audio()
-        fd, path = tempfile.mkstemp(suffix=".wav", prefix="lawn_")
+        fd, path = tempfile.mkstemp(suffix=".wav", prefix="hallway_")
         os.close(fd)
         try:
             self._write_wav(res, path)

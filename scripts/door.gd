@@ -4,6 +4,7 @@ signal opened(id)
 
 var id := ""
 var is_open := false
+var locked := false
 var line := ""
 var pivot: Node3D
 var mesh_inst: MeshInstance3D
@@ -11,7 +12,7 @@ var col_shape: CollisionShape3D
 var target := 0.0
 
 func can_interact() -> bool:
-    return not is_open
+    return not is_open and not locked
 
 const Tex = preload("res://scripts/texgen.gd")
 

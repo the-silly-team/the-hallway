@@ -2,7 +2,7 @@ config_version=5
 
 [application]
 
-config/name="MOW THE LAWN"
+config/name="THE HALLWAY"
 run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 

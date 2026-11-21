@@ -1,24 +1,24 @@
-# MOW THE LAWN
+# THE HALLWAY
 
-**a game about mowing a lawn that refuses to stay mowed.**
+**find the keycard. don't make a sound.**
 
-inspired by the "dig a hole, sell the dirt, upgrade the shovel" loop — except instead of a hole you have a lawn, instead of dirt you have clippings, and instead of finishing you have MOW THE LAWN 2 where the grass grows forever. trust us.
+a first-person, doors-inspired escape loop: one corridor, a row of doors, and a keycard that is never where you left it. the hallway remembers every run. clear a floor, get another one.
 
-> **status:** early. the repo currently holds the reusable base (godot project, menu, settings, persistence, input, procedural textures/audio, SILLYSOFT asset formats + tooling). the mowing loop itself is still being designed. screenshots in `docs/` are from the base engine.
+> **status:** early. the repo currently holds the playable v1 slice (the hallway floors + the old office as a classic mode), the godot base, and the SILLYSOFT asset formats + tooling. more floors are being built.
 
 ## download
 
-**[the-silly-team.github.io/mow-the-lawn](https://the-silly-team.github.io/mow-the-lawn/)** ← the download page. click there to grab the windows build.
+**[the-silly-team.github.io/the-hallway](https://the-silly-team.github.io/the-hallway/)** ← the download page. click there to grab the windows build.
 
-**[direct link to releases](https://github.com/the-silly-team/mow-the-lawn/releases)** — first playable build lands here when v1 is ready. no steam, no $100 fee, no launcher. just a zip.
+**[direct link to releases](https://github.com/the-silly-team/the-hallway/releases)** — zips land here, no steam, no $100 fee, no launcher. just unzip and run.
 
 ## the pitch
 
-- mow grass, collect clippings, sell them, buy a better mower, mow more grass
-- day/night cycle: grass grows faster at night, you need lights to see what you're doing
-- achievements for stupid stuff like perfect stripes, mowing at 3am, and hitting a sprinkler
-- a weird secret under the lawn
-- the lawn keeps growing. forever. that's the whole sequel
+- walk the hallway, try the doors, find the keycard, reach the exit
+- the old office is still in there as a classic mode if you want the original loop
+- floors stack as you clear them — the hallway gets less friendly every time
+- footsteps and door clicks tell you more than the lights do
+- achievements for stupid stuff you'll accidentally earn, and one weird secret past the end hall
 
 ## run from source
 
@@ -38,13 +38,13 @@ headless smoke test:
 & $Godot --headless --path . menu.tscn --quit-after 300
 ```
 
-## controls (base build)
+## controls
 
 | input | action |
 |---|---|
 | `W A S D` | walk |
 | mouse | look around |
-| `E` | interact |
+| `E` | interact / hide |
 | `Esc` | pause / release mouse |
 | click | recapture mouse |
 
@@ -63,7 +63,7 @@ assets use SILLYSOFT, our own original binary format family (no copying anyone's
 
 full docs: [SILLYSOFT.md](SILLYSOFT.md)
 
-**companion app:** [lawn-inspector](https://github.com/the-silly-team/lawn-inspector) — open any `.sl*` file, preview textures, play audio, follow references, read hex. standalone python, zero godot, zero plugins.
+**companion app:** [hallway-inspector](https://github.com/the-silly-team/hallway-inspector) — open any `.sl*` file, preview textures, play audio, follow references, read hex. standalone python, zero godot, zero plugins.
 
 ## credits
 

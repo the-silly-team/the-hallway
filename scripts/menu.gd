@@ -4,7 +4,7 @@ const MenuBG3D := preload("res://scripts/menu_bg3d.gd")
 const SettingsUI := preload("res://scripts/settings_ui.gd")
 const UI := preload("res://scripts/ui_utils.gd")
 
-const TITLE := "MOW THE LAWN"
+const TITLE := "THE HALLWAY"
 
 var _fade: ColorRect
 var _title: Label
@@ -78,7 +78,7 @@ func _build_ui() -> void:
     add_child(_title)
 
     _tagline = Label.new()
-    _tagline.text = "a lawn that refuses to stay mowed"
+    _tagline.text = "find the keycard. don't make a sound."
     _tagline.set_anchors_preset(Control.PRESET_CENTER_TOP)
     _tagline.offset_left = -400.0
     _tagline.offset_right = 400.0
@@ -100,7 +100,12 @@ func _build_ui() -> void:
     box.add_theme_constant_override("separation", 16)
     add_child(box)
 
-    var specs: Array = [["PLAY", _on_play], ["SETTINGS", _on_settings], ["QUIT", _on_quit]]
+    var specs: Array = [
+        ["THE HALLWAY", _on_hallway],
+        ["THE OLD OFFICE (classic)", _on_play],
+        ["SETTINGS", _on_settings],
+        ["QUIT", _on_quit],
+    ]
     for i in specs.size():
         var b := Button.new()
         b.text = specs[i][0]
@@ -114,7 +119,7 @@ func _build_ui() -> void:
         tw.tween_property(b, "modulate:a", 1.0, 0.35)
 
     var hint := Label.new()
-    hint.text = "wasd move  ·  mouse look  ·  e open doors  ·  esc pause"
+    hint.text = "wasd move  ·  mouse look  ·  e interact / hide  ·  esc pause"
     hint.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
     hint.offset_top = -44.0
     hint.offset_bottom = -16.0
@@ -124,7 +129,7 @@ func _build_ui() -> void:
     add_child(hint)
 
     var ver := Label.new()
-    ver.text = "mow the lawn  ·  v0.1"
+    ver.text = "the hallway  ·  v0.1"
     ver.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
     ver.offset_left = -220.0
     ver.offset_right = -24.0
@@ -143,6 +148,10 @@ func _process(d: float) -> void:
     elif not _tagged:
         _tagged = true
         create_tween().tween_property(_tagline, "modulate:a", 1.0, 0.8)
+
+func _on_hallway() -> void:
+    Audio.sfx("confirm")
+    _transition("res://floors.tscn")
 
 func _on_play() -> void:
     Audio.sfx("confirm")

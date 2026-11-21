@@ -5,7 +5,7 @@ import sys
 import tkinter as tk
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import lawn_inspector as d
+import hallway_inspector as d
 
 SAMPLES = os.path.normpath(
     os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "samples")

@@ -1,20 +1,20 @@
-# LAWN INSPECTOR 🌱🔍
+# HALLWAY INSPECTOR 🔍
 
 **a standalone native GUI for the SILLYSOFT `.sl*` asset family.**
 
-companion tool for [MOW THE LAWN](https://github.com/the-silly-team/mow-the-lawn), by the silly team. not a godot scene. not a plugin. not electron. just python's stdlib `tkinter` in a real win32 window — launches instantly, no packages to install, no node_modules the size of a small moon.
+companion tool for [THE HALLWAY](https://github.com/the-silly-team/the-hallway), by the silly team. not a godot scene. not a plugin. not electron. just python's stdlib `tkinter` in a real win32 window — launches instantly, no packages to install, no node_modules the size of a small moon.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/the-silly-team/mow-the-lawn/main/docs/final_play_small.png" alt="the game these assets come from" width="640">
+  <img src="https://raw.githubusercontent.com/the-silly-team/the-hallway/main/docs/final_play_small.png" alt="the game these assets come from" width="640">
 </p>
 
 ## launch
 
-double-click `LAWN_INSPECTOR.cmd`, or from a terminal:
+double-click `HALLWAY_INSPECTOR.cmd`, or from a terminal:
 
 ```powershell
-python lawn_inspector.py
-python lawn_inspector.py samples/manifest.slmf
+python hallway_inspector.py
+python hallway_inspector.py samples/manifest.slmf
 ```
 
 drop `.sl*` files onto the `.cmd` launcher to open them directly. `Ctrl+O` opens the file picker.
@@ -59,6 +59,6 @@ opens every sample in a real Tk window, cycles every tab, exits. prints `GUI SMO
 
 ## companion
 
-this repo: https://github.com/the-silly-team/lawn-inspector
+this repo: https://github.com/the-silly-team/hallway-inspector
 
-assets come from [mow-the-lawn](https://github.com/the-silly-team/mow-the-lawn). built with :3 and concerning amounts of coffee.
+assets come from [the-hallway](https://github.com/the-silly-team/the-hallway). built with :3 and concerning amounts of coffee.

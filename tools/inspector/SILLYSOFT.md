@@ -80,4 +80,4 @@ Godot's default WAV import uses ADPCM compression. SILLYSOFT audio stores raw 16
 
 ## viewer
 
-For a native GUI that decodes every format above: [lawn-inspector](https://github.com/the-silly-team/lawn-inspector).
+For a native GUI that decodes every format above: [hallway-inspector](https://github.com/the-silly-team/hallway-inspector).
