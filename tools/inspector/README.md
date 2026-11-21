@@ -2,10 +2,10 @@
 
 **a standalone native GUI for the SILLYSOFT `.sl*` asset family.**
 
-companion tool for [MOW MY LAWN](https://github.com/the-silly-team/mow-my-lawn), by the silly team. not a godot scene. not a plugin. not electron. just python's stdlib `tkinter` in a real win32 window — launches instantly, no packages to install, no node_modules the size of a small moon.
+companion tool for [MOW THE LAWN](https://github.com/the-silly-team/mow-the-lawn), by the silly team. not a godot scene. not a plugin. not electron. just python's stdlib `tkinter` in a real win32 window — launches instantly, no packages to install, no node_modules the size of a small moon.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/the-silly-team/mow-my-lawn/main/docs/final_play_small.png" alt="the game these assets come from" width="640">
+  <img src="https://raw.githubusercontent.com/the-silly-team/mow-the-lawn/main/docs/final_play_small.png" alt="the game these assets come from" width="640">
 </p>
 
 ## launch
@@ -61,4 +61,4 @@ opens every sample in a real Tk window, cycles every tab, exits. prints `GUI SMO
 
 this repo: https://github.com/the-silly-team/lawn-inspector
 
-assets come from [mow-my-lawn](https://github.com/the-silly-team/mow-my-lawn). built with :3 and concerning amounts of coffee.
+assets come from [mow-the-lawn](https://github.com/the-silly-team/mow-the-lawn). built with :3 and concerning amounts of coffee.

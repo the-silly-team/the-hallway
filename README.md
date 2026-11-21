@@ -1,16 +1,16 @@
-# MOW MY LAWN
+# MOW THE LAWN
 
 **a game about mowing a lawn that refuses to stay mowed.**
 
-inspired by the "dig a hole, sell the dirt, upgrade the shovel" loop — except instead of a hole you have a lawn, instead of dirt you have clippings, and instead of finishing you have MOW MY LAWN 2 where the grass grows forever. trust us.
+inspired by the "dig a hole, sell the dirt, upgrade the shovel" loop — except instead of a hole you have a lawn, instead of dirt you have clippings, and instead of finishing you have MOW THE LAWN 2 where the grass grows forever. trust us.
 
 > **status:** early. the repo currently holds the reusable base (godot project, menu, settings, persistence, input, procedural textures/audio, SILLYSOFT asset formats + tooling). the mowing loop itself is still being designed. screenshots in `docs/` are from the base engine.
 
 ## download
 
-**[the-silly-team.github.io/mow-my-lawn](https://the-silly-team.github.io/mow-my-lawn/)** ← the download page. click there to grab the windows build.
+**[the-silly-team.github.io/mow-the-lawn](https://the-silly-team.github.io/mow-the-lawn/)** ← the download page. click there to grab the windows build.
 
-**[direct link to releases](https://github.com/the-silly-team/mow-my-lawn/releases)** — first playable build lands here when v1 is ready. no steam, no $100 fee, no launcher. just a zip.
+**[direct link to releases](https://github.com/the-silly-team/mow-the-lawn/releases)** — first playable build lands here when v1 is ready. no steam, no $100 fee, no launcher. just a zip.
 
 ## the pitch
 
